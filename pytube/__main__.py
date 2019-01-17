@@ -244,6 +244,15 @@ class YouTube(object):
         """
         return self.player_config_args['thumbnail_url']
 
+     @property
+    def thumbnail_url_hq(self):
+        """
+        Get the high quality thumbnail url image
+
+        :rtype: str
+        """
+        return self.thumbnail_url.replace('default', 'hqdefault')
+
     @property
     def title(self):
         """Get the video title.
